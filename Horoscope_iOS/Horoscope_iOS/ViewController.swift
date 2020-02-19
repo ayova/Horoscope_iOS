@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var datePickerOutlet: UIDatePicker!
+    @IBOutlet weak var buttonTapOutlet: UIButton!
     
     //MARK: IBActions
     @IBAction func buttonTapped(_ sender: Any) {
@@ -24,6 +25,9 @@ class ViewController: UIViewController {
                 ViewController.userAnimal = animal
             }
         }
+    }
+    @IBAction func datePicked(_ sender: Any) {
+        buttonTapOutlet.isEnabled = true
     }
     
     //MARK: Internal variables

@@ -8,20 +8,95 @@
     </dependencies>
     <scenes>
         <!--Animal list-->
-        <scene sceneID="5B0-ng-SZr">
+        <scene sceneID="TbO-sS-kDh">
             <objects>
-                <viewController id="uG1-r0-pVp" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8sb-iM-gmn">
+                <navigationController id="3jr-35-vDs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Animal list" image="list.dash" catalog="system" id="igf-Jl-pI6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T7Z-Li-yrR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Cue-Jk-aSp" kind="relationship" relationship="rootViewController" id="VOU-zd-StU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o96-DU-1xk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="455"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="L8z-6O-oX4">
+            <objects>
+                <tableViewController id="Cue-Jk-aSp" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3ZN-DJ-Zir">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="W0v-Kh-u4p"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Animal list" image="list.dash" catalog="system" id="egX-VJ-diR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="psL-Pe-W6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cdF-KR-YdG" customClass="AnimalTableViewCell" customModule="Horoscope_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="93.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cdF-KR-YdG" id="EEh-1v-FLd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WkY-ct-1RW">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="94"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoU-Dq-qOG">
+                                                    <rect key="frame" x="0.0" y="37" width="315" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JTV-hZ-wr9">
+                                                    <rect key="frame" x="323" y="8" width="75" height="78"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="JTV-hZ-wr9" secondAttribute="bottom" constant="8" id="4bi-vh-YpG"/>
+                                                <constraint firstItem="JTV-hZ-wr9" firstAttribute="top" secondItem="WkY-ct-1RW" secondAttribute="top" constant="8" id="Ro4-vw-fQx"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WkY-ct-1RW" firstAttribute="leading" secondItem="EEh-1v-FLd" secondAttribute="leading" constant="8" id="3Mz-Pc-Fyq"/>
+                                        <constraint firstAttribute="trailing" secondItem="WkY-ct-1RW" secondAttribute="trailing" constant="8" id="9qe-tN-grW"/>
+                                        <constraint firstItem="WkY-ct-1RW" firstAttribute="top" secondItem="EEh-1v-FLd" secondAttribute="top" id="IGj-pO-fFK"/>
+                                        <constraint firstAttribute="bottom" secondItem="WkY-ct-1RW" secondAttribute="bottom" constant="-0.5" id="eXT-oV-neF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="animalImage" destination="JTV-hZ-wr9" id="bbc-G5-FSQ"/>
+                                    <outlet property="animalNameLabel" destination="FoU-Dq-qOG" id="bAB-y2-uXH"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cue-Jk-aSp" id="2Fs-b7-zPg"/>
+                            <outlet property="delegate" destination="Cue-Jk-aSp" id="oAN-In-QV8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="O1A-al-arP"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lc3-Am-Ge7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-717" y="455"/>
+            <point key="canvasLocation" x="144.92753623188406" y="454.6875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EsQ-tG-Clr">
+            <objects>
+                <viewController id="nvp-X1-Pq4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OYy-6S-vi0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xAp-aX-wkj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWx-GM-nJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="455"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zkN-xU-lUj">
@@ -33,8 +108,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uG1-r0-pVp" kind="relationship" relationship="viewControllers" id="Sam-6a-A16"/>
                         <segue destination="JDB-cF-fdK" kind="relationship" relationship="viewControllers" id="FvB-6f-Gu3"/>
+                        <segue destination="3jr-35-vDs" kind="relationship" relationship="viewControllers" id="BOU-oB-nO6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJX-8I-DjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -80,8 +155,11 @@
                                 <date key="maximumDate" timeIntervalSinceReferenceDate="-31582800">
                                     <!--2000-01-01 11:00:00 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="datePicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Y6-aC-gvk"/>
+                                </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duY-Zy-lSA">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duY-Zy-lSA">
                                 <rect key="frame" x="167.5" y="484.5" width="79" height="30"/>
                                 <state key="normal" title="Descubrelo"/>
                                 <connections>
@@ -105,6 +183,7 @@
                     <tabBarItem key="tabBarItem" title="Finder" image="magnifyingglass" catalog="system" id="TpU-Eu-3fP"/>
                     <navigationItem key="navigationItem" id="EYv-4B-MKs"/>
                     <connections>
+                        <outlet property="buttonTapOutlet" destination="duY-Zy-lSA" id="3xM-i9-dSx"/>
                         <outlet property="datePickerOutlet" destination="pAW-00-EUn" id="Yye-6N-X2T"/>
                     </connections>
                 </viewController>
@@ -115,7 +194,6 @@
         <!--Finder View Controller-->
         <scene sceneID="op9-EW-3gu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7gD-PH-zXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="lT4-Ui-a0W" customClass="FinderViewController" customModule="Horoscope_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Th-YW-rna">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -151,6 +229,7 @@
                         <outlet property="animalNameOutlet" destination="Wb0-Kk-BMn" id="pkk-IN-Tp2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gD-PH-zXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058" y="-305"/>
         </scene>
