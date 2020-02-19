@@ -24,33 +24,33 @@
             </objects>
             <point key="canvasLocation" x="-717" y="455"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Animal Table View Controller-->
         <scene sceneID="L8z-6O-oX4">
             <objects>
-                <tableViewController id="Cue-Jk-aSp" sceneMemberID="viewController">
+                <tableViewController id="Cue-Jk-aSp" customClass="AnimalTableViewController" customModule="Horoscope_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3ZN-DJ-Zir">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cdF-KR-YdG" customClass="AnimalTableViewCell" customModule="Horoscope_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="93.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animalCell" id="cdF-KR-YdG" customClass="AnimalTableViewCell" customModule="Horoscope_iOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="94.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cdF-KR-YdG" id="EEh-1v-FLd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="93.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="94.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WkY-ct-1RW">
-                                            <rect key="frame" x="8" y="0.0" width="398" height="94"/>
+                                            <rect key="frame" x="8" y="0.0" width="398" height="95"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoU-Dq-qOG">
-                                                    <rect key="frame" x="0.0" y="37" width="315" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="37.5" width="315" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JTV-hZ-wr9">
-                                                    <rect key="frame" x="323" y="8" width="75" height="78"/>
+                                                    <rect key="frame" x="323" y="8" width="75" height="79"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -69,6 +69,7 @@
                                 <connections>
                                     <outlet property="animalImage" destination="JTV-hZ-wr9" id="bbc-G5-FSQ"/>
                                     <outlet property="animalNameLabel" destination="FoU-Dq-qOG" id="bAB-y2-uXH"/>
+                                    <segue destination="nvp-X1-Pq4" kind="show" trigger="accessoryAction" id="Cak-QL-u0A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -93,6 +94,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xAp-aX-wkj"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dy3-hP-tNX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWx-GM-nJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

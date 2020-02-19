@@ -27,7 +27,7 @@ class AnimalTableViewCell: UITableViewCell {
     
     func updateCell(with animal: Animal) {
         animalNameLabel.text = animal.name.rawValue
-        
+        animalImage.image = animal.image
     }
 
 }
