@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-717" y="455"/>
         </scene>
-        <!--Animal Table View Controller-->
+        <!--Animales del zodiaco-->
         <scene sceneID="L8z-6O-oX4">
             <objects>
                 <tableViewController id="Cue-Jk-aSp" customClass="AnimalTableViewController" customModule="Horoscope_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,23 +34,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animalCell" id="cdF-KR-YdG" customClass="AnimalTableViewCell" customModule="Horoscope_iOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="94.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="96.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cdF-KR-YdG" id="EEh-1v-FLd">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="94.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="96.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WkY-ct-1RW">
-                                            <rect key="frame" x="8" y="0.0" width="398" height="95"/>
+                                            <rect key="frame" x="16" y="0.0" width="382" height="97"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoU-Dq-qOG">
-                                                    <rect key="frame" x="0.0" y="37.5" width="315" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="38.5" width="299" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JTV-hZ-wr9">
-                                                    <rect key="frame" x="323" y="8" width="75" height="79"/>
+                                                    <rect key="frame" x="307" y="8" width="75" height="81"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80.5" id="65N-ek-zCj"/>
+                                                        <constraint firstAttribute="width" constant="75" id="xWi-8e-qhe"/>
+                                                    </constraints>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -60,8 +65,8 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="WkY-ct-1RW" firstAttribute="leading" secondItem="EEh-1v-FLd" secondAttribute="leading" constant="8" id="3Mz-Pc-Fyq"/>
-                                        <constraint firstAttribute="trailing" secondItem="WkY-ct-1RW" secondAttribute="trailing" constant="8" id="9qe-tN-grW"/>
+                                        <constraint firstItem="WkY-ct-1RW" firstAttribute="leading" secondItem="EEh-1v-FLd" secondAttribute="leading" constant="16" id="3Mz-Pc-Fyq"/>
+                                        <constraint firstAttribute="trailing" secondItem="WkY-ct-1RW" secondAttribute="trailing" constant="16" id="9qe-tN-grW"/>
                                         <constraint firstItem="WkY-ct-1RW" firstAttribute="top" secondItem="EEh-1v-FLd" secondAttribute="top" id="IGj-pO-fFK"/>
                                         <constraint firstAttribute="bottom" secondItem="WkY-ct-1RW" secondAttribute="bottom" constant="-0.5" id="eXT-oV-neF"/>
                                     </constraints>
@@ -78,7 +83,7 @@
                             <outlet property="delegate" destination="Cue-Jk-aSp" id="oAN-In-QV8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="O1A-al-arP"/>
+                    <navigationItem key="navigationItem" title="Animales del zodiaco" id="O1A-al-arP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lc3-Am-Ge7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
