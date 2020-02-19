@@ -34,12 +34,29 @@
                     </tabBar>
                     <connections>
                         <segue destination="uG1-r0-pVp" kind="relationship" relationship="viewControllers" id="Sam-6a-A16"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sbt-8u-DeE"/>
+                        <segue destination="JDB-cF-fdK" kind="relationship" relationship="viewControllers" id="FvB-6f-Gu3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJX-8I-DjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1636" y="131"/>
+        </scene>
+        <!--Finder-->
+        <scene sceneID="XKG-QI-2AY">
+            <objects>
+                <navigationController id="JDB-cF-fdK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Finder" image="magnifyingglass" catalog="system" id="vuW-8u-5Sp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x1L-Vt-Rbn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0HM-br-zRw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRP-jQ-ddr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="-305"/>
         </scene>
         <!--Finder-->
         <scene sceneID="tne-QT-ifu">
@@ -50,13 +67,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your date of birth (dd/mm/yyyy):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rap-We-KcR">
-                                <rect key="frame" x="60" y="76" width="294" height="21"/>
+                                <rect key="frame" x="60" y="120" width="294" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="pAW-00-EUn">
-                                <rect key="frame" x="47" y="161" width="320" height="216"/>
+                                <rect key="frame" x="47" y="205" width="320" height="216"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-347115600">
                                     <!--1990-01-01 11:00:00 +0000-->
                                 </date>
@@ -76,6 +93,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uW-T9-sYl"/>
+                                    <segue destination="lT4-Ui-a0W" kind="show" id="K0F-wo-F29"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -92,6 +110,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Finder" image="magnifyingglass" catalog="system" id="TpU-Eu-3fP"/>
+                    <navigationItem key="navigationItem" id="EYv-4B-MKs"/>
                     <connections>
                         <outlet property="datePickerOutlet" destination="pAW-00-EUn" id="m5y-tu-aS5"/>
                         <outlet property="deleteLabel" destination="QSr-KE-9k4" id="x2y-fl-cFI"/>
@@ -99,7 +118,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-717" y="-314"/>
+            <point key="canvasLocation" x="145" y="-305"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="op9-EW-3gu">
+            <objects>
+                <viewController id="lT4-Ui-a0W" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Th-YW-rna">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="gdE-1m-DeR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nH8-3R-uPV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gD-PH-zXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="-305"/>
         </scene>
     </scenes>
     <resources>
