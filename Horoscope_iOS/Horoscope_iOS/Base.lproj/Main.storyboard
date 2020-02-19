@@ -66,14 +66,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your date of birth (dd/mm/yyyy):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rap-We-KcR">
-                                <rect key="frame" x="60" y="120" width="294" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu fecha de nacimiento (dd/mm/aaaa):" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rap-We-KcR">
+                                <rect key="frame" x="8" y="120" width="398" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="pAW-00-EUn">
-                                <rect key="frame" x="47" y="205" width="320" height="216"/>
+                                <rect key="frame" x="47" y="204.5" width="320" height="216"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-347115600">
                                     <!--1990-01-01 11:00:00 +0000-->
                                 </date>
@@ -81,29 +81,22 @@
                                     <!--2000-01-01 11:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSr-KE-9k4">
-                                <rect key="frame" x="8" y="438" width="398" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duY-Zy-lSA">
-                                <rect key="frame" x="186" y="521" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duY-Zy-lSA">
+                                <rect key="frame" x="167.5" y="484.5" width="79" height="30"/>
+                                <state key="normal" title="Descubrelo"/>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uW-T9-sYl"/>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FgR-GS-Rg3"/>
                                     <segue destination="lT4-Ui-a0W" kind="show" id="K0F-wo-F29"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="rap-We-KcR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="2cf-qc-MCx"/>
                             <constraint firstItem="rap-We-KcR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6a5-MV-cXo"/>
-                            <constraint firstItem="QSr-KE-9k4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8d6-a9-56f"/>
-                            <constraint firstItem="QSr-KE-9k4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S0r-qq-k9c"/>
                             <constraint firstItem="rap-We-KcR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="W3X-gz-TpO"/>
-                            <constraint firstItem="QSr-KE-9k4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ZV5-M5-c22"/>
+                            <constraint firstItem="duY-Zy-lSA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XGj-k1-S1a"/>
+                            <constraint firstItem="duY-Zy-lSA" firstAttribute="top" secondItem="pAW-00-EUn" secondAttribute="bottom" constant="64" id="c8L-Ii-I4N"/>
                             <constraint firstItem="pAW-00-EUn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVB-Bk-DtN"/>
                             <constraint firstItem="pAW-00-EUn" firstAttribute="top" secondItem="rap-We-KcR" secondAttribute="bottom" constant="64" id="rOt-h5-be7"/>
                         </constraints>
@@ -112,27 +105,52 @@
                     <tabBarItem key="tabBarItem" title="Finder" image="magnifyingglass" catalog="system" id="TpU-Eu-3fP"/>
                     <navigationItem key="navigationItem" id="EYv-4B-MKs"/>
                     <connections>
-                        <outlet property="datePickerOutlet" destination="pAW-00-EUn" id="m5y-tu-aS5"/>
-                        <outlet property="deleteLabel" destination="QSr-KE-9k4" id="x2y-fl-cFI"/>
+                        <outlet property="datePickerOutlet" destination="pAW-00-EUn" id="Yye-6N-X2T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="145" y="-305"/>
         </scene>
-        <!--View Controller-->
+        <!--Finder View Controller-->
         <scene sceneID="op9-EW-3gu">
             <objects>
-                <viewController id="lT4-Ui-a0W" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gD-PH-zXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="lT4-Ui-a0W" customClass="FinderViewController" customModule="Horoscope_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Th-YW-rna">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb0-Kk-BMn">
+                                <rect key="frame" x="8" y="96" width="398" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Day-rB-Pd7">
+                                <rect key="frame" x="8" y="158" width="398" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wb0-Kk-BMn" firstAttribute="top" secondItem="gdE-1m-DeR" secondAttribute="top" constant="8" id="4eR-ue-lCb"/>
+                            <constraint firstItem="Day-rB-Pd7" firstAttribute="centerX" secondItem="9Th-YW-rna" secondAttribute="centerX" id="5PB-3s-Zdy"/>
+                            <constraint firstItem="Day-rB-Pd7" firstAttribute="leading" secondItem="gdE-1m-DeR" secondAttribute="leading" constant="8" id="J00-Y5-JGJ"/>
+                            <constraint firstItem="Wb0-Kk-BMn" firstAttribute="centerX" secondItem="9Th-YW-rna" secondAttribute="centerX" id="LBc-e2-ad3"/>
+                            <constraint firstItem="Wb0-Kk-BMn" firstAttribute="leading" secondItem="gdE-1m-DeR" secondAttribute="leading" constant="8" id="i4n-5G-chM"/>
+                            <constraint firstItem="Day-rB-Pd7" firstAttribute="top" secondItem="Wb0-Kk-BMn" secondAttribute="bottom" constant="32" id="jLD-IM-lLw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gdE-1m-DeR"/>
                     </view>
                     <navigationItem key="navigationItem" id="nH8-3R-uPV"/>
+                    <connections>
+                        <outlet property="animalDescriptionOutlet" destination="Day-rB-Pd7" id="ahI-Vp-8UD"/>
+                        <outlet property="animalNameOutlet" destination="Wb0-Kk-BMn" id="pkk-IN-Tp2"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7gD-PH-zXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1058" y="-305"/>
         </scene>

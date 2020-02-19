@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		841DFFB523FB2D6E003839B2 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DFFB423FB2D6E003839B2 /* Animal.swift */; };
+		84BD6F2F23FD2A7C007C9373 /* FinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BD6F2E23FD2A7C007C9373 /* FinderViewController.swift */; };
 		84D27A4223F7222C00E1559D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D27A4123F7222C00E1559D /* AppDelegate.swift */; };
 		84D27A4423F7222C00E1559D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D27A4323F7222C00E1559D /* SceneDelegate.swift */; };
 		84D27A4623F7222C00E1559D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D27A4523F7222C00E1559D /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		841DFFB423FB2D6E003839B2 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		84BD6F2E23FD2A7C007C9373 /* FinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderViewController.swift; sourceTree = "<group>"; };
 		84D27A3E23F7222C00E1559D /* Horoscope_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horoscope_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D27A4123F7222C00E1559D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D27A4323F7222C00E1559D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				84D27A4323F7222C00E1559D /* SceneDelegate.swift */,
 				84D27A4523F7222C00E1559D /* ViewController.swift */,
 				841DFFB423FB2D6E003839B2 /* Animal.swift */,
+				84BD6F2E23FD2A7C007C9373 /* FinderViewController.swift */,
 				84D27A4723F7222C00E1559D /* Main.storyboard */,
 				84D27A4A23F7222D00E1559D /* Assets.xcassets */,
 				84D27A4C23F7222D00E1559D /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				84D27A4623F7222C00E1559D /* ViewController.swift in Sources */,
 				841DFFB523FB2D6E003839B2 /* Animal.swift in Sources */,
 				84D27A4223F7222C00E1559D /* AppDelegate.swift in Sources */,
+				84BD6F2F23FD2A7C007C9373 /* FinderViewController.swift in Sources */,
 				84D27A4423F7222C00E1559D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

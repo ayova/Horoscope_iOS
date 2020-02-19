@@ -21,19 +21,19 @@ struct Animal: CustomStringConvertible {
         return "La gente nacida entre \(formatter.string(from: dateFrom)) y \(formatter.string(from: dateTo)), es representada por el \(name), quien es \(attributes), y es afin con \(affinity). "
     }
     
-    enum AnimalName {
-        case Rata
-        case Buey
-        case Tigre
-        case Liebre
-        case Dragon
-        case Caballo
-        case Serpiente
-        case Cabra
-        case Mono
-        case Gallo
-        case Perro
-        case Cerdo
+    enum AnimalName: String {
+        case Rata = "Rata"
+        case Buey = "Buey"
+        case Tigre = "Tigre"
+        case Liebre = "Liebre"
+        case Dragon = "Dragon"
+        case Caballo = "Caballo"
+        case Serpiente = "Serpiente"
+        case Cabra = "Cabra"
+        case Mono = "Mono"
+        case Gallo = "Gallo"
+        case Perro = "Perro"
+        case Cerdo = "Cerdo"
     }
     
 }

@@ -11,19 +11,17 @@ import UIKit
 class ViewController: UIViewController {
 
     let animals = Animals
+    static var userAnimal: Animal? = nil
     
     //MARK: IBOutlets
     @IBOutlet weak var datePickerOutlet: UIDatePicker!
-    @IBOutlet weak var deleteLabel: UILabel!
     
     //MARK: IBActions
     @IBAction func buttonTapped(_ sender: Any) {
         let pickerDate = datePickerOutlet.date
-        
-        
         for animal in animals {
             if (animal.dateFrom ... animal.dateTo).contains(pickerDate) {
-                deleteLabel.text = animal.description
+                ViewController.userAnimal = animal
             }
         }
     }
