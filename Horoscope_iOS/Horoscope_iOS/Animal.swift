@@ -16,7 +16,9 @@ struct Animal: CustomStringConvertible {
     let dateTo: Date
     
     var description: String {
-        return "La gente nacida entre \(dateFrom) y \(dateTo), es representada por el \(name), quien es \(attributes), y es afin con \(affinity). "
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        return "La gente nacida entre \(formatter.string(from: dateFrom)) y \(formatter.string(from: dateTo)), es representada por el \(name), quien es \(attributes), y es afin con \(affinity). "
     }
     
     enum AnimalName {

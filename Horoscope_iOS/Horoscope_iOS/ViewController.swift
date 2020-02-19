@@ -10,29 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let animals = Animals
+    
     //MARK: IBOutlets
     @IBOutlet weak var datePickerOutlet: UIDatePicker!
     @IBOutlet weak var deleteLabel: UILabel!
     
     //MARK: IBActions
     @IBAction func buttonTapped(_ sender: Any) {
-        let dateOut = datePickerOutlet.date
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyyy" // format date
-        let convertedDateToString = formatter.string(from: dateOut)
-        deleteLabel.text = convertedDateToString
-        // check date in a range of dates
-        let fallsBetween = (Animals[0].dateFrom ... Animals[0].dateTo).contains(dateOut)
-        print(fallsBetween)
+        let pickerDate = datePickerOutlet.date
+        
+        
+        for animal in animals {
+            if (animal.dateFrom ... animal.dateTo).contains(pickerDate) {
+                deleteLabel.text = animal.description
+            }
+        }
     }
     
     //MARK: Internal variables
-    var ani = Animals[0]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(ani)
         
     }
 

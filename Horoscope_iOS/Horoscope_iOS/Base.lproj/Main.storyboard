@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yPc-1m-JBG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,7 +7,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Animal list-->
+        <scene sceneID="5B0-ng-SZr">
+            <objects>
+                <viewController id="uG1-r0-pVp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8sb-iM-gmn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="W0v-Kh-u4p"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Animal list" image="list.dash" catalog="system" id="egX-VJ-diR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="psL-Pe-W6W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-717" y="455"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zkN-xU-lUj">
+            <objects>
+                <tabBarController id="yPc-1m-JBG" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GXP-lU-2hP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uG1-r0-pVp" kind="relationship" relationship="viewControllers" id="Sam-6a-A16"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sbt-8u-DeE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJX-8I-DjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1636" y="131"/>
+        </scene>
+        <!--Finder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Horoscope_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,8 +64,8 @@
                                     <!--2000-01-01 11:00:00 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSr-KE-9k4">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSr-KE-9k4">
+                                <rect key="frame" x="8" y="438" width="398" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,11 +85,13 @@
                             <constraint firstItem="QSr-KE-9k4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8d6-a9-56f"/>
                             <constraint firstItem="QSr-KE-9k4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S0r-qq-k9c"/>
                             <constraint firstItem="rap-We-KcR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="W3X-gz-TpO"/>
+                            <constraint firstItem="QSr-KE-9k4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ZV5-M5-c22"/>
                             <constraint firstItem="pAW-00-EUn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVB-Bk-DtN"/>
                             <constraint firstItem="pAW-00-EUn" firstAttribute="top" secondItem="rap-We-KcR" secondAttribute="bottom" constant="64" id="rOt-h5-be7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Finder" image="magnifyingglass" catalog="system" id="TpU-Eu-3fP"/>
                     <connections>
                         <outlet property="datePickerOutlet" destination="pAW-00-EUn" id="m5y-tu-aS5"/>
                         <outlet property="deleteLabel" destination="QSr-KE-9k4" id="x2y-fl-cFI"/>
@@ -63,7 +99,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="-717" y="-314"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="64" height="42"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
