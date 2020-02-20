@@ -140,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="-717" y="-305"/>
         </scene>
-        <!--Finder-->
+        <!--Encuentra tu animal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Horoscope_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -148,47 +148,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu fecha de nacimiento (dd/mm/aaaa):" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rap-We-KcR">
-                                <rect key="frame" x="8" y="120" width="398" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="pAW-00-EUn">
-                                <rect key="frame" x="47" y="204.5" width="320" height="216"/>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-347115600">
-                                    <!--1990-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="-31582800">
-                                    <!--2000-01-01 11:00:00 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="datePicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Y6-aC-gvk"/>
-                                </connections>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duY-Zy-lSA">
-                                <rect key="frame" x="167.5" y="484.5" width="79" height="30"/>
-                                <state key="normal" title="Descubrelo"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FgR-GS-Rg3"/>
-                                    <segue destination="lT4-Ui-a0W" kind="show" id="K0F-wo-F29"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-Px-3mi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41X-5j-T7v">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu fecha de nacimiento (dd/mm/aaaa):" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rap-We-KcR">
+                                                <rect key="frame" x="8" y="8" width="398" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="pAW-00-EUn">
+                                                <rect key="frame" x="8" y="60.5" width="398" height="216"/>
+                                                <date key="minimumDate" timeIntervalSinceReferenceDate="-347115600">
+                                                    <!--1990-01-01 11:00:00 +0000-->
+                                                </date>
+                                                <date key="maximumDate" timeIntervalSinceReferenceDate="-31582800">
+                                                    <!--2000-01-01 11:00:00 +0000-->
+                                                </date>
+                                                <connections>
+                                                    <action selector="datePicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="1Y6-aC-gvk"/>
+                                                </connections>
+                                            </datePicker>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duY-Zy-lSA">
+                                                <rect key="frame" x="167.5" y="308.5" width="79" height="30"/>
+                                                <state key="normal" title="Descubrelo"/>
+                                                <connections>
+                                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FgR-GS-Rg3"/>
+                                                    <segue destination="lT4-Ui-a0W" kind="show" id="K0F-wo-F29"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="pAW-00-EUn" firstAttribute="centerX" secondItem="41X-5j-T7v" secondAttribute="centerX" id="BME-tz-BBp"/>
+                                            <constraint firstItem="rap-We-KcR" firstAttribute="leading" secondItem="41X-5j-T7v" secondAttribute="leading" constant="8" id="CVj-JW-kKO"/>
+                                            <constraint firstItem="duY-Zy-lSA" firstAttribute="centerX" secondItem="pAW-00-EUn" secondAttribute="centerX" id="I1K-b1-uUq"/>
+                                            <constraint firstItem="duY-Zy-lSA" firstAttribute="top" secondItem="pAW-00-EUn" secondAttribute="bottom" constant="32" id="KxA-y2-GQH"/>
+                                            <constraint firstItem="rap-We-KcR" firstAttribute="centerX" secondItem="41X-5j-T7v" secondAttribute="centerX" id="N6L-Xm-zm2"/>
+                                            <constraint firstItem="pAW-00-EUn" firstAttribute="leading" secondItem="41X-5j-T7v" secondAttribute="leading" constant="8" id="NJL-2R-lug"/>
+                                            <constraint firstAttribute="height" constant="1000" id="NnW-A7-OlM"/>
+                                            <constraint firstItem="rap-We-KcR" firstAttribute="top" secondItem="41X-5j-T7v" secondAttribute="top" constant="8" id="uXr-tz-GhI"/>
+                                            <constraint firstItem="pAW-00-EUn" firstAttribute="top" secondItem="rap-We-KcR" secondAttribute="bottom" constant="32" id="uwD-YN-pZs"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="41X-5j-T7v" firstAttribute="bottom" secondItem="qQH-pY-L5X" secondAttribute="bottom" constant="725" id="5Fl-JY-2jN"/>
+                                    <constraint firstItem="41X-5j-T7v" firstAttribute="top" secondItem="qQH-pY-L5X" secondAttribute="top" id="8Ot-ml-hht"/>
+                                    <constraint firstItem="41X-5j-T7v" firstAttribute="trailing" secondItem="qQH-pY-L5X" secondAttribute="trailing" constant="414" id="Ahh-Ax-8lM"/>
+                                    <constraint firstItem="41X-5j-T7v" firstAttribute="width" secondItem="Vpm-Ds-1bh" secondAttribute="width" id="DNd-05-DPM"/>
+                                    <constraint firstItem="41X-5j-T7v" firstAttribute="leading" secondItem="qQH-pY-L5X" secondAttribute="leading" id="oFF-LB-HSZ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="qQH-pY-L5X"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Vpm-Ds-1bh"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rap-We-KcR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="2cf-qc-MCx"/>
-                            <constraint firstItem="rap-We-KcR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6a5-MV-cXo"/>
-                            <constraint firstItem="rap-We-KcR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="W3X-gz-TpO"/>
-                            <constraint firstItem="duY-Zy-lSA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XGj-k1-S1a"/>
-                            <constraint firstItem="duY-Zy-lSA" firstAttribute="top" secondItem="pAW-00-EUn" secondAttribute="bottom" constant="64" id="c8L-Ii-I4N"/>
-                            <constraint firstItem="pAW-00-EUn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVB-Bk-DtN"/>
-                            <constraint firstItem="pAW-00-EUn" firstAttribute="top" secondItem="rap-We-KcR" secondAttribute="bottom" constant="64" id="rOt-h5-be7"/>
+                            <constraint firstItem="MOy-Px-3mi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Pg-6K-7G4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MOy-Px-3mi" secondAttribute="bottom" id="aB5-nu-IoU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MOy-Px-3mi" secondAttribute="trailing" id="jle-cp-yfA"/>
+                            <constraint firstItem="MOy-Px-3mi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w8M-Zw-8l4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Finder" image="magnifyingglass" catalog="system" id="TpU-Eu-3fP"/>
-                    <navigationItem key="navigationItem" id="EYv-4B-MKs"/>
+                    <navigationItem key="navigationItem" title="Encuentra tu animal" id="EYv-4B-MKs"/>
                     <connections>
                         <outlet property="buttonTapOutlet" destination="duY-Zy-lSA" id="3xM-i9-dSx"/>
                         <outlet property="datePickerOutlet" destination="pAW-00-EUn" id="Yye-6N-X2T"/>
@@ -196,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="-305"/>
+            <point key="canvasLocation" x="144.92753623188406" y="-305.35714285714283"/>
         </scene>
         <!--Finder View Controller-->
         <scene sceneID="op9-EW-3gu">
