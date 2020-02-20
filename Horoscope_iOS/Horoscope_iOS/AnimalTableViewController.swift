@@ -38,7 +38,7 @@ class AnimalTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showAnimalListDetail", sender: self)
+        performSegue(withIdentifier: "animalCellDetail", sender: self)
         AnimalTableViewController.animalTappedOn = Animals[indexPath.row] // returns the animal the user tapped on
     }
 

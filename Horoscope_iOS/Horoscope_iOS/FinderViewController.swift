@@ -11,11 +11,17 @@ import UIKit
 class FinderViewController: UIViewController {
     @IBOutlet weak var animalDescriptionOutlet: UILabel!
     @IBOutlet weak var animalNameOutlet: UILabel!
+    @IBOutlet weak var animalImageOutlet: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         animalNameOutlet.text = ViewController.userAnimal?.name.rawValue
         animalDescriptionOutlet.text = ViewController.userAnimal?.description
+        animalImageOutlet.image = ViewController.userAnimal?.image
     }
+    override func childContaining(_ source: UIStoryboardUnwindSegueSource) -> UIViewController? {
+        return source.source
+    }
+
 
 }
