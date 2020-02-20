@@ -10,6 +10,8 @@ import UIKit
 
 class AnimalTableViewController: UITableViewController {
 
+    static var animalTappedOn: Animal?
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -35,6 +37,10 @@ class AnimalTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showAnimalListDetail", sender: self)
+        AnimalTableViewController.animalTappedOn = Animals[indexPath.row] // returns the animal the user tapped on
+    }
 
     /*
     // Override to support conditional editing of the table view.

@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Animal list-->
+        <!--Lista de animales-->
         <scene sceneID="TbO-sS-kDh">
             <objects>
                 <navigationController id="3jr-35-vDs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Animal list" image="list.dash" catalog="system" id="igf-Jl-pI6"/>
+                    <tabBarItem key="tabBarItem" title="Lista de animales" image="list.dash" catalog="system" id="igf-Jl-pI6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="T7Z-Li-yrR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -74,7 +74,7 @@
                                 <connections>
                                     <outlet property="animalImage" destination="JTV-hZ-wr9" id="bbc-G5-FSQ"/>
                                     <outlet property="animalNameLabel" destination="FoU-Dq-qOG" id="bAB-y2-uXH"/>
-                                    <segue destination="nvp-X1-Pq4" kind="show" trigger="accessoryAction" id="Cak-QL-u0A"/>
+                                    <segue destination="nvp-X1-Pq4" kind="show" identifier="showAnimalListDetail" trigger="accessoryAction" id="Cak-QL-u0A"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,21 +89,85 @@
             </objects>
             <point key="canvasLocation" x="144.92753623188406" y="454.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Present Animal View Controller-->
         <scene sceneID="EsQ-tG-Clr">
             <objects>
-                <viewController id="nvp-X1-Pq4" sceneMemberID="viewController">
+                <viewController id="nvp-X1-Pq4" customClass="PresentAnimalViewController" customModule="Horoscope_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OYy-6S-vi0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiV-Oq-dxP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDU-Pg-U6N">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn1-BW-TbA">
+                                                <rect key="frame" x="16" y="32" width="382" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUe-6H-fua">
+                                                <rect key="frame" x="107" y="85" width="200" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="Bh6-es-nIU"/>
+                                                    <constraint firstAttribute="width" constant="200" id="Mjh-q0-tgb"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gU1-qF-ufH">
+                                                <rect key="frame" x="16" y="349" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="nn1-BW-TbA" firstAttribute="leading" secondItem="cDU-Pg-U6N" secondAttribute="leading" constant="16" id="2oj-TS-esV"/>
+                                            <constraint firstItem="oUe-6H-fua" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cDU-Pg-U6N" secondAttribute="leading" constant="8" id="D54-Mq-ygr"/>
+                                            <constraint firstItem="oUe-6H-fua" firstAttribute="centerX" secondItem="cDU-Pg-U6N" secondAttribute="centerX" id="ENu-0O-Nc0"/>
+                                            <constraint firstItem="gU1-qF-ufH" firstAttribute="leading" secondItem="cDU-Pg-U6N" secondAttribute="leading" constant="16" id="JGR-ew-HFS"/>
+                                            <constraint firstItem="gU1-qF-ufH" firstAttribute="centerX" secondItem="oUe-6H-fua" secondAttribute="centerX" id="Yzz-ja-Ej2"/>
+                                            <constraint firstItem="oUe-6H-fua" firstAttribute="top" secondItem="nn1-BW-TbA" secondAttribute="bottom" constant="32" id="bYQ-V6-bIX"/>
+                                            <constraint firstItem="nn1-BW-TbA" firstAttribute="centerX" secondItem="cDU-Pg-U6N" secondAttribute="centerX" id="gLm-5V-maT"/>
+                                            <constraint firstItem="nn1-BW-TbA" firstAttribute="top" secondItem="cDU-Pg-U6N" secondAttribute="top" constant="32" id="gSv-Cc-eG0"/>
+                                            <constraint firstItem="gU1-qF-ufH" firstAttribute="top" secondItem="oUe-6H-fua" secondAttribute="bottom" constant="64" id="xCv-cD-qgg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cDU-Pg-U6N" firstAttribute="top" secondItem="4jd-Vg-mgm" secondAttribute="top" id="6El-pu-NXT"/>
+                                    <constraint firstItem="cDU-Pg-U6N" firstAttribute="width" secondItem="Je6-rL-U7Z" secondAttribute="width" id="MAw-xa-WU6"/>
+                                    <constraint firstItem="cDU-Pg-U6N" firstAttribute="bottom" secondItem="Je6-rL-U7Z" secondAttribute="bottom" id="PTx-b6-7bU"/>
+                                    <constraint firstItem="cDU-Pg-U6N" firstAttribute="bottom" secondItem="4jd-Vg-mgm" secondAttribute="bottom" constant="725" id="ZR9-h9-2GX"/>
+                                    <constraint firstItem="cDU-Pg-U6N" firstAttribute="leading" secondItem="4jd-Vg-mgm" secondAttribute="leading" id="dzG-cP-k0H"/>
+                                    <constraint firstItem="cDU-Pg-U6N" firstAttribute="trailing" secondItem="4jd-Vg-mgm" secondAttribute="trailing" constant="414" id="myS-Pt-wbf"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4jd-Vg-mgm"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Je6-rL-U7Z"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WiV-Oq-dxP" firstAttribute="top" secondItem="xAp-aX-wkj" secondAttribute="top" id="CD9-y4-KCt"/>
+                            <constraint firstItem="WiV-Oq-dxP" firstAttribute="leading" secondItem="xAp-aX-wkj" secondAttribute="leading" id="Dht-Ki-NMg"/>
+                            <constraint firstItem="xAp-aX-wkj" firstAttribute="trailing" secondItem="WiV-Oq-dxP" secondAttribute="trailing" id="FRq-nH-wK1"/>
+                            <constraint firstItem="xAp-aX-wkj" firstAttribute="bottom" secondItem="WiV-Oq-dxP" secondAttribute="bottom" id="pfi-gS-OQI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xAp-aX-wkj"/>
                     </view>
                     <navigationItem key="navigationItem" id="dy3-hP-tNX"/>
+                    <connections>
+                        <outlet property="presentAnimalDescription" destination="gU1-qF-ufH" id="lub-0N-csw"/>
+                        <outlet property="presentAnimalImage" destination="oUe-6H-fua" id="8ki-O2-0JA"/>
+                        <outlet property="presentAnimalNameLabel" destination="nn1-BW-TbA" id="tW6-hX-v81"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BWx-GM-nJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="455"/>
+            <point key="canvasLocation" x="1057.9710144927537" y="454.6875"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zkN-xU-lUj">
@@ -123,11 +187,11 @@
             </objects>
             <point key="canvasLocation" x="-1636" y="131"/>
         </scene>
-        <!--Finder-->
+        <!--Buscador-->
         <scene sceneID="XKG-QI-2AY">
             <objects>
                 <navigationController id="JDB-cF-fdK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Finder" image="magnifyingglass" catalog="system" id="vuW-8u-5Sp"/>
+                    <tabBarItem key="tabBarItem" title="Buscador" image="magnifyingglass" catalog="system" id="vuW-8u-5Sp"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x1L-Vt-Rbn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

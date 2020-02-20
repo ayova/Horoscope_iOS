@@ -28,5 +28,6 @@ class AnimalTableViewCell: UITableViewCell {
         animalNameLabel.text = animal.name.rawValue
         animalImage.image = animal.image
     }
-
+    
+    
 }
